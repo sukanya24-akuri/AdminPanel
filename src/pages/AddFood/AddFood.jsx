@@ -30,7 +30,7 @@ const AddFood = () => {
     event.preventDefault();
       if(!image)
       {
-        toast.error("please select an image github");
+        toast.error("please select an image");
        
         return;
       }
@@ -44,7 +44,7 @@ setImage(null);
 } 
 catch (error)
  {
-  toast.error("Faild to add food")
+  toast.error("Failed to add food")
   
 }
 }

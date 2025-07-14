@@ -2,7 +2,7 @@ import axios from "axios";
 import { data } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const api_url = 'http://localhost:8081/api/food';
+const api_url = 'http://ec2-15-206-163-19.ap-south-1.compute.amazonaws.com:8081/api/food';
 export const addFood = async (foodData, image) => {
 
     const formData = new FormData();
@@ -12,11 +12,11 @@ export const addFood = async (foodData, image) => {
         await axios.post(api_url, formData, { headers: { "Content-Type": "multipart/form-data" } });
     }
     catch (error) {
-        console.log('Error -occured in add food', error);
+        console.log('Error occured in add food', error);
         throw error;
     }
 }
-//getALl
+//getAll
 export const getFoodList = async () => {
     try {
         const response = await axios.get(api_url);
