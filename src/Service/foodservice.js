@@ -2,7 +2,7 @@ import axios from "axios";
 import { data } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const api_url = 'http://localhost:8081/api/food';
+const api_url = 'http://ec2-15-206-163-19.ap-south-1.compute.amazonaws.com:8081/api/food';
 export const addFood = async (foodData, image) => {
 
     const formData = new FormData();
